@@ -2,14 +2,26 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <div>
-      version: <strong></strong>
+      version: <strong>{{appVersion}}</strong>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      appVersion: this.getVersion()
+    }
+  },
+  methods: {
+    getVersion() {
+      console.log(process.env.NODE_ENV);
+      if (process.env.NODE_ENV === 'development') return 'dev'
+      return process.env.APP_VERSION || 'Не определена'
+    }
+  }
 }
 </script>
 

@@ -4,8 +4,6 @@ networks:
 services:
   local:
     image: vue-docker-nginx:latest
-    # environment:
-    #   API_URL: http://api.2mx.org/graphql
     ports:
       - 3000:80
     networks:
