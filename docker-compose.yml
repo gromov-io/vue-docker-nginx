@@ -15,8 +15,8 @@ services:
     networks:
       - back
   prod:
-    image: ghcr.io/gromov-io/vue-docker-nginx:latest
+    image: ghcr.io/gromov-io/vue-docker-nginx:0.0.2
     ports:
-      - 3001:80
+      - 3002:80
     networks:
       - back

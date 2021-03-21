@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     getVersion() {
-      console.log(process.env.NODE_ENV);
+      console.log(process.env);
       if (process.env.NODE_ENV === 'development') return 'dev'
       return process.env.APP_VERSION || 'Не определена'
     }
