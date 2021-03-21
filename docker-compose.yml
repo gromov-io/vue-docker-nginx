@@ -2,11 +2,17 @@ version: "3.6"
 networks:
   back:
 services:
-  client:
+  local:
     image: vue-docker-nginx:latest
     # environment:
     #   API_URL: http://api.2mx.org/graphql
     ports:
       - 3000:80
+    networks:
+      - back
+  client:
+    image: ghcr.io/gromov-io/vue-docker-nginx:latest
+    ports:
+      - 3001:80
     networks:
       - back

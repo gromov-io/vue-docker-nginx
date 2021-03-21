@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <div>
+      version: <strong></strong>
+    </div>
   </div>
 </template>
 
