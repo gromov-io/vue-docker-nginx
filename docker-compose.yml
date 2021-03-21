@@ -8,7 +8,13 @@ services:
       - 3000:80
     networks:
       - back
-  client:
+  alpha:
+    image: ghcr.io/gromov-io/vue-docker-nginx:latest
+    ports:
+      - 3001:80
+    networks:
+      - back
+  prod:
     image: ghcr.io/gromov-io/vue-docker-nginx:latest
     ports:
       - 3001:80
